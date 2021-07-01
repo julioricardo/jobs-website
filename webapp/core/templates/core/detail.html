@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ 
+  <h1>Título: {{ job.titulo }}</h1>
+
+  <p><strong>Organizacion:</strong> {{ job.organizacion }}</p> <!-- author detail link not yet defined -->
+  <p><strong>Descripción:</strong> {{ job.descripcion }}</p>
+  <p><strong>Tipo:</strong> {{ job.tipo }}</p>
+  <p><strong>Zona:</strong> {{ job.zona }}</p>
+  <p><strong>Ciudad:</strong> {{ job.ciudad }}</p>
+  <p><strong>Salario:</strong> {{ job.salario }}</p>
+  <p><strong>Cierre:</strong> {{ job.fecha_cierre }}</p>
+  {% if job.activo %}
+          <p><strong>&#10004 Activo</strong>
+          {% else %}
+          <p><strong>&#10004 No activo</strong>
+          {% endif %}
+  <br/>
+    <br/>
+    
+<a href="{% url 'webapp:home' %}"class="btn btn-primary">Volver</a>
+    
+    
+   
+  <div style="margin-left:20px;margin-top:20px">
+{% endblock %}

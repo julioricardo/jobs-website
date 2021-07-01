@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        {% if request.user.is_authenticated %}
+        {% if request.user.role == "persona" %}
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+               <a class="nav-link" href="{% url 'cuentas:edit-profile' %}">Editar Perfil <span class="sr-only">(current)</span></a>
+            </li>
+        {% else %}
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <span class="float-left">
+               <a class="nav-link" href="{% url 'organizaciones:edit-org' %}">Editar Perfil <span class="sr-only">(current)</span><i class="fa fa-pencil" aria-hidden="true"></i>
+                </a>
+            </span>
+            </li>
+        {% endif %}
+        {% if request.user.role == "persona" %}
+        
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'core:home' %}">Oportunidades</a>
+            </li>
+        {% else %}    
+
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'core:dashboard' %}">Oportunidades</a>
+            </li>
+        {% endif %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'nosotros:pages' %}">Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="{% url 'contactos:contactos' %}">Contacto</a>
+            </li>
+        </ul>
+        {% endif %}
+        <span>
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'core:logout' %}" class="btn btn-danger">Salir</a>
+            <i>Hola {{user.first_name}}</i>
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+
+            {% else %}
+            
+            <div class="row">
+                <a href="{% url 'core:login' %}" class="fa fa-sign-in" class="btn btn-secondary">Entrar</a>
+              
+                <div class="dropdown">
+                    <button style="margin: 2px"  class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    
+                        Registrarse
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="{% url 'core:persona-register' %}" class="btn btn-info">Persona</a>
+                    <a class="dropdown-item" href="{% url 'core:organizacion-register' %}">Organización</a>
+                
+                    </div>  
+                </div>
+
+                
+                
+               
+            </div>
+
+            {% endif %}
+
+        </span>
+    </div>
+</nav>

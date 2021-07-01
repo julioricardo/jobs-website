@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% block title %}Entrar{% endblock title %}
+
+{% block content %}
+<div class="">
+    <div style="text-align: center;">
+        <h1>Ingresar</h1>
+        {% if form.errors %}
+        <p>
+            Su nombre de usuario o contraseña son incorrectas
+            Por favor intente nuevamente
+        </p>
+        {% else %}
+        <p>Por favor complete el siguiente formulario para ingresar</p>
+        {% endif %}
+    </div>
+
+    <form action="" method="post" class="form ">
+        <p><a href="{% url 'core:password_reset' %}">Olvidé mi contraseña</a></p>
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+        <input type="hidden" name="next" value="{{ next }}" />
+        <button type="submit" class="btn btn-primary">Entrar</button>
+        {% endbuttons %}
+    </form>
+</div>
+{% endblock content %}

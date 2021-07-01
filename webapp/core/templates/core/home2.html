@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+
+    <section class="job-form-section job-form-section--image">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="job-form-box">
+                        <h2 class="heading">Encuentra la <span class="accent">Oportunidad </span> que
+                            <span class="accent">amarás</span>.
+                        </h2>
+                        <form id="job-main-form" method="get" action="{% url 'empleos:search' %}" class="job-main-form">
+                            <div class="controls">
+                                <div class="row align-items-center">
+                               
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="titulo">Título</label>
+                                            <input type="text" id="titulo" name="titulo"
+                                                   placeholder="Título" class="form-control">
+                                        </div>
+                                    </div>
+                                   <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="ciudad">Ciudad</label>
+                                            <input type="text" id="ciudad" name="ciudad"
+                                                   placeholder="Ciudad" class="form-control">
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="tipo">Tipo</label>
+                                            <input type="text" id="tipo" name="tipo"
+                                                   placeholder="medio tiempo" class="form-control">
+                                        </div>
+                                        
+                                        
+                                    </div>
+
+
+                                    <div class="col-md-2">
+                                        <button type="submit"
+                                                class="btn btn-outline-white-primary job-main-form__button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-light-gray">
+        <div class="container">
+            <h3 class="heading">Oportunidades</h3>
+            <div class="row featured align-items-stretch">
+           
+                {% for job in jobs %}
+               
+                    <div class="col-sm-4 services-box hoverServices">
+                        <div class="box-image-text bg-visible full-height">
+                          
+                            <div class="top">
+                                <a href="#">
+                                </a>
+                            </div>
+                            <div class="content">
+                             <div class="shadow-none p-3 mb-5 bg-light rounded">
+                                    <h5>{{ job.organizacion }}</h5>
+                                    <h6><a href="{% url 'empleos:detail-job' job.pk %}">{{ job.titulo }}</a></h6>
+                                <div class="logo">
+                                        <img class="card-img-top" src="{{ job.organizacion.imagen.url }}" alt="" style="max-width: 80px;">
+                                </div>
+                                <p class="featured__details"><i class="fas fa-map-marker-alt"></i>
+                                
+                                    {{ job.ciudad }}
+                                    <br/>
+                                    {% if job.tipo == 'parcial' %}
+                                        <span class="badge featured-badge badge-success">TIEMPO PARCIAL</span>
+                                    {% elif job.tipo == 'completo' %}
+                                        <span class="badge featured-badge badge-primary">TEIMPO COMPLETO</span>
+                                    {% else %}
+                                        <span style="color: #ffffff;" class="badge featured-badge badge-warning">REMOTO</span>
+                                    {% endif %}
+                                    {% if job.categoria == 'empleo' %}
+                                        <span class="badge featured-badge badge-success">EMPLEO</span>
+                                    {% elif job.categoria == 'pasantia' %}
+                                        <span class="badge featured-badge badge-primary">PASANTÍA</span>
+                                    {% elif job.categoria == 'voluntariado' %}
+                                        <span class="badge featured-badge badge-primary">VOLUNTARIADO</span>
+                                    {% else %}
+                                        <span style="color: #ffffff;" class="badge featured-badge badge-warning">OTRO</span>
+                                    {% endif %}
+                                     
+                                </p>
+                              
+                                <p>{{ job.descripcion|truncatewords:30 }}</p>
+                                <p>Publicado: {{ job.fecha_publicacion|date:'d/M/y' }}</p>
+                                <p>Cierre: {{ job.fecha_cierre|date:'d/M/y' }}</p>
+                                
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                
+                {% endfor %}
+                
+            </div>
+            
+        </div>
+    </section>
+    
+    <section class="section-divider">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Empieza a cambiar tu vida ahora </p>
+                    <p><a href="#" class="btn btn-outline-light">See our job offers </a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

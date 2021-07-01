@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for jobs in page_obj %}
+
+<div class="row">
+
+  <div class="card-deck" style="width:350px">
+    <div class="card text-center mt-5">
+    <img class="card-img-top" src="{{ jobs.organizacion.imagen.url }}" alt="Card image cap" class="rounded">
+      <div class="card-body">
+        <h5 class="card-title">Oportunidad</h5>
+        
+        <p class="card-text">Título: {{ jobs.titulo|upper }}</p>
+        <p class="card-text">Organización: {{ jobs.organizacion|upper }}</p>
+        <p class="card-text">Ciudad: {{ jobs.ciudad|upper }}</p>
+        <p class="card-text">Tipo: {{ jobs.tipo|upper }}</p>
+         <p class="card-text">Fecha de cierre: {{ jobs.fecha_cierre|upper }}</p>
+         
+        <a href="{% url 'empleos:detail-job' jobs.pk %}" class="btn btn-primary">Ver más</a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+  
+
+    {# Each "contact" is a Contact model object. #}
+    
+    
+{% endfor %}
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; primero</a>
+            <a href="?page={{ page_obj.previous_page_number }}">anterior</a>
+        {% endif %}
+
+        <span class="current">
+            Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">siguiente</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">último &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+
+{% endblock %}

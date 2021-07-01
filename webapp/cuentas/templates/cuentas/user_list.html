@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p>
+    <a href="{% url 'user_add' %}" class="btn btn-primary">Add person</a>
+  </p>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+       
+        <th>Email</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for person in user %}
+        <tr>
+          <td><a href="{% url 'user_edit' person.pk %}">{{ person.email }}</a></td>
+          <td>{{ person.email }}</td>
+          <td>{{ person.role }}</td>
+        </tr>
+      {% empty %}
+        <tr class="table-active">
+          <td colspan="3">No data</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

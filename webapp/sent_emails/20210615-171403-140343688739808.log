@@ -1,0 +1,13 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: bagurre@mail.com
+Date: Tue, 15 Jun 2021 17:14:03 -0000
+Message-ID: <162377724326.18153.4737008179737964490@julio-pc>
+
+Someone asked for password reset for email bagurre@mail.com.Follow the Link below
+http://127.0.0.1:8000{% url "core:password_reset_confirm"
+uidb64=uid token=token %}
+-------------------------------------------------------------------------------

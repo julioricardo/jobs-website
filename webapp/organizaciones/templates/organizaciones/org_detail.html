@@ -1,0 +1,44 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for org in orgprofile %}
+ 
+  <h1>Nombre: {{ org.nombre }}</h1>
+
+  <p><strong>RUC:</strong> {{ org.ruc }}</p> <!-- author detail link not yet defined -->
+  <p><strong>Descripcion:</strong> {{ org.descripcion }}</p>
+  <p><strong>Dirección:</strong> {{ org.direccion }}</p>
+  <p><strong>Teléfono:</strong> {{ org.telefono }}</p>
+  {% if org.imagen %}
+  <img
+                    src="{{ org.imagen.url }}"
+                    
+                    class="img-fluid"
+                    width="85px"
+                    height="85px"
+                  />
+  {% else %}
+    <p><strong>Imagen:</strong> No registrada</p>
+  {% endif%}
+  
+  
+  {% if org.website %}
+    <p><strong>Website:</strong> {{ org.website }}</p>
+  {% else %}
+  <p><strong>Website:</strong> No registrada</p>
+   {% endif %}
+  {% if org.activo %}
+          <p><strong>&#10004 Activo</strong>
+          {% else %}
+          <p><strong>&#10004 No activo</strong>
+          {% endif %}
+  <br/>
+    <br/>
+<a href="{% url 'organizaciones:edit-org' %}"class="btn btn-primary">Editar</a>
+<a href="{% url 'organizaciones:org-list' %}"class="btn btn-primary">Volver</a>
+
+  <div style="margin-left:20px;margin-top:20px">
+  {% endfor %}
+{% endblock %}

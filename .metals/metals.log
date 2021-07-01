@@ -1,0 +1,101 @@
+[0m2021.06.13 14:03:30 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.56.2.[0m
+[0m2021.06.13 14:03:33 INFO  time: initialize in 3.04s[0m
+[0m2021.06.13 14:03:34 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.13 14:03:34 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.13 14:50:24 INFO  shutting down Metals[0m
+[0m2021.06.13 18:19:34 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.56.2.[0m
+[0m2021.06.13 18:19:38 INFO  time: initialize in 3.64s[0m
+[0m2021.06.13 18:19:38 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.13 18:19:38 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.13 22:44:37 INFO  shutting down Metals[0m
+[0m2021.06.14 16:11:09 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.56.2.[0m
+[0m2021.06.14 16:11:12 INFO  time: initialize in 2.81s[0m
+[0m2021.06.14 16:11:12 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.14 16:11:12 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.14 16:22:50 INFO  shutting down Metals[0m
+[0m2021.06.18 06:39:17 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.56.2.[0m
+[0m2021.06.18 06:39:20 INFO  time: initialize in 3.37s[0m
+[0m2021.06.18 06:39:20 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.18 06:39:20 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.18 08:47:50 INFO  shutting down Metals[0m
+[0m2021.06.18 14:02:54 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.56.2.[0m
+[0m2021.06.18 14:02:59 INFO  time: initialize in 4.5s[0m
+[0m2021.06.18 14:02:59 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.18 14:02:59 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.18 19:18:55 INFO  shutting down Metals[0m
+[0m2021.06.19 07:01:14 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.56.2.[0m
+[0m2021.06.19 07:01:17 INFO  time: initialize in 2.65s[0m
+[0m2021.06.19 07:01:17 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.19 07:01:17 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.19 11:26:30 INFO  shutting down Metals[0m
+[0m2021.06.19 14:13:58 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.56.2.[0m
+[0m2021.06.19 14:14:03 INFO  time: initialize in 5.75s[0m
+[0m2021.06.19 14:14:03 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.19 14:14:03 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.19 18:52:14 INFO  shutting down Metals[0m
+[0m2021.06.20 06:44:10 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.56.2.[0m
+[0m2021.06.20 06:44:13 INFO  time: initialize in 3.55s[0m
+[0m2021.06.20 06:44:13 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.20 06:44:13 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.20 07:29:02 INFO  shutting down Metals[0m
+[0m2021.06.21 14:20:59 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.57.1.[0m
+[0m2021.06.21 14:21:02 INFO  time: initialize in 2.56s[0m
+[0m2021.06.21 14:21:02 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.21 14:21:02 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.21 18:52:18 INFO  shutting down Metals[0m
+[0m2021.06.22 06:23:02 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.57.1.[0m
+[0m2021.06.22 06:23:05 INFO  time: initialize in 3.52s[0m
+[0m2021.06.22 06:23:06 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.22 06:23:06 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.22 14:23:52 INFO  shutting down Metals[0m
+[0m2021.06.24 13:24:46 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.57.1.[0m
+[0m2021.06.24 13:24:50 INFO  time: initialize in 3.2s[0m
+[0m2021.06.24 13:24:50 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.24 13:24:50 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.24 23:21:33 INFO  shutting down Metals[0m
+[0m2021.06.25 06:07:48 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.57.1.[0m
+[0m2021.06.25 06:07:51 INFO  time: initialize in 3.04s[0m
+[0m2021.06.25 06:07:51 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.25 06:07:51 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.25 14:52:57 INFO  shutting down Metals[0m
+[0m2021.06.26 11:14:04 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.57.1.[0m
+[0m2021.06.26 11:14:07 INFO  time: initialize in 3.47s[0m
+[0m2021.06.26 11:14:07 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.26 11:14:07 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.26 17:26:06 INFO  shutting down Metals[0m
+[0m2021.06.27 15:49:14 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.57.1.[0m
+[0m2021.06.27 15:49:17 INFO  time: initialize in 2.46s[0m
+[0m2021.06.27 15:49:17 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.27 15:49:17 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.27 18:36:28 INFO  shutting down Metals[0m
+[0m2021.06.27 20:40:47 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.57.1.[0m
+[0m2021.06.27 20:40:50 INFO  time: initialize in 3.73s[0m
+[0m2021.06.27 20:40:51 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.27 20:40:51 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.27 22:44:47 INFO  shutting down Metals[0m
+[0m2021.06.28 06:42:37 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.57.1.[0m
+[0m2021.06.28 06:42:40 INFO  time: initialize in 2.21s[0m
+[0m2021.06.28 06:42:40 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.28 06:42:40 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.28 14:40:06 INFO  shutting down Metals[0m
+[0m2021.06.28 22:27:57 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.57.1.[0m
+[0m2021.06.28 22:28:00 INFO  time: initialize in 2.91s[0m
+[0m2021.06.28 22:28:00 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.28 22:28:00 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.29 00:19:17 INFO  shutting down Metals[0m
+[0m2021.06.29 13:19:36 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.57.1.[0m
+[0m2021.06.29 13:19:39 INFO  time: initialize in 3.4s[0m
+[0m2021.06.29 13:19:39 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.29 13:19:39 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.29 13:29:10 INFO  shutting down Metals[0m
+[0m2021.06.30 06:12:02 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.57.1.[0m
+[0m2021.06.30 06:12:04 INFO  time: initialize in 2.08s[0m
+[0m2021.06.30 06:12:04 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.30 06:12:04 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.06.30 07:10:49 INFO  shutting down Metals[0m
+[0m2021.07.01 09:28:55 INFO  Started: Metals version 0.10.4 in workspace '/home/julio/proyecto_Web_Octavio' for client Visual Studio Code 1.57.1.[0m
+[0m2021.07.01 09:28:58 INFO  time: initialize in 2.64s[0m
+[0m2021.07.01 09:28:58 WARN  Build server is not auto-connectable.[0m
+[0m2021.07.01 09:28:58 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+jul 01, 2021 9:29:08 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMACIÓN: Unsupported notification method: $/setTrace

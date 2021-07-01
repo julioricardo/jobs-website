@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Cuadro de Mando{% endblock title %}
+{% block content %}
+<h1>{{welcome}}</h1>
+<br>
+<a href="{% url 'core:edit' %}" class="btn btn-primary">Editar Perfil</a> or
+<a href="{% url 'core:password_change' %}" class="btn btn-warning">Cambiar contraseña</a>
+<hr>
+{% endblock content %}

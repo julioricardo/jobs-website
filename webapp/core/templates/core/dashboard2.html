@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Cuadro de Mando
+{% endblock %}
+
+{% block content %}
+
+    <section class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                   
+                    <p class="lead text-center">Oportunidades Registradas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-right mb-5">
+                    <a href="{% url 'empleos:create-job' %}" class="btn btn-outline-white-primary">
+                        <i class="fa fa-plus"></i>Agregar una nueva Oportunidad
+                    </a>
+                </div>
+                <div class="col-lg-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover table-client-dashboard">
+                            <thead>
+                            <tr>
+                                <th>Oportunidad Título</th>
+                                <th>Estado</th>
+                                <th>Fecha de Publicación</th>
+                                <th>Fecha de Cierre</th>
+                                <th>Applicantes</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for job in jobs %}
+
+                                <tr>
+                                    <th><a href="{% url 'empleos:detail-job' job.pk %}">{{ job.titulo }}</a>
+                                    </th>
+                                    <td>
+                                        {% if job.activo %}
+                                            <span class="badge badge-success">Activo</span>
+                                        {% else %}
+                                            <span class="badge badge-secondary">No Activo</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>{{ job.fecha_publicacion }}</td>
+                                    <td>{{ job.fecha_cierre }}</td>
+                                    <td>
+                                        <a href="{% url 'empleos:employer-all-applicants' job.pk %}"
+                                           class="btn btn-success">
+                                            <i class="fa fa-users"></i>{{ job.applicants.count }}
+                                            <span class="hidden-xs hidden-sm">Applicantes</span>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="{% url 'empleos:update-job' job.pk %}" class="btn btn-outline-white-secondary">
+                                            <i class="fa fa-edit"></i>Editar
+                                        </a>
+                                        <br>
+                                        
+                                        <a href="{% url 'empleos:delete-job' job.pk %}" class="btn btn-outline-white-secondary">
+                                            <i class="fa fa-times-circle-o"></i>Eliminar
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pages">
+                        <nav aria-label="Page navigation example" class="d-flex justify-content-center mt-4 mb-4">
+                            <ul class="pagination">
+                                <li class="page-item"><a href="#" aria-label="Previous" class="page-link"><span
+                                        aria-hidden="true">«</span><span class="sr-only">Anterior</span></a></li>
+                                <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                <li class="page-item"><a href="#" aria-label="Next" class="page-link"><span
+                                        aria-hidden="true">»</span><span class="sr-only">Siguiente</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

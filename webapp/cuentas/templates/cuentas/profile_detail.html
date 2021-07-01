@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for pro in profile %}
+ 
+  <h1>Nombre: {{ pro.user.first_name }}</h1>
+
+  <p><strong>Apellido:</strong> {{ pro.user.last_name }}</p> <!-- author detail link not yet defined -->
+  <p><strong>Cédula:</strong> {{ pro.cedula }}</p>
+  <p><strong>Dirección:</strong> {{ pro.direccion }}</p>
+  <p><strong>Teléfono:</strong> {{ pro.telefono }}</p>
+  <p><strong>Correo:</strong> {{ pro.user.email }}</p>
+  <p><strong>Sobre mi:</strong> {{ pro.descripcion }}</p>
+ 
+  <p><strong>Objetivos Desarrollo Sontenible:</strong> {{ pro.ods.intereses }}</p>
+
+  {% if pro.imagen %}
+  <img
+                    src="{{ pro.imagen.url }}"
+                    
+                    class=""img-fluid""
+                    width="85px"
+                    height="85px"
+                  />
+  {% else %}
+    <p><strong>Imagen:</strong> No registrada</p>
+  {% endif%}
+  
+  {% if org.activo %}
+          <p><strong>&#10004 Activo</strong>
+          {% else %}
+          <p><strong>&#10004 No activo</strong>
+          {% endif %}
+  <br/>
+    <br/>
+<a href="{% url 'cuentas:edit-profile' %}"class="btn btn-primary">Editar</a>
+<a href="{% url 'cuentas:profile-list' %}"class="btn btn-primary">Volver</a>
+
+  <div style="margin-left:20px;margin-top:20px">
+  {% endfor %}
+{% endblock %}

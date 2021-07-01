@@ -1,0 +1,42 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+       
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Cédula</th>
+        <th>Correo</th>
+        <th>Estado</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      {% for pro in profile %}
+        <tr>
+          <td><a href="{% url 'cuentas:detail-profile' pro.pk %}">{{ pro.user.first_name }}</a></td>
+          <td>{{ pro.user.last_name }}</td>
+          <td>{{ pro.cedula }}</td>
+          <td>{{ pro.user.email }}</td>
+          {% if pro.activo %}
+          <td>&#10004 Activo</td>
+          {% else %}
+          <td>&#9746 No Activo</td>
+          
+          {% endif %}
+          
+          
+        </tr>
+      {% empty %}
+        <tr class="table-active">
+          <td colspan="3">No hay datos registrados</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
