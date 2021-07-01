@@ -68,9 +68,9 @@ class Applicants(models.Model):
         User, related_name='applied', on_delete=models.CASCADE)
     date_posted = models.DateTimeField(auto_now_add=True)
     cv = models.FileField(upload_to=user_directory_path_cv,default='default.png',validators=[FileExtensionValidator
-(allowed_extensions=['pdf', 'docx'])])
+(allowed_extensions=['pdf'])])
     cp = models.FileField(upload_to=user_directory_path_cp,default='default.png',validators=[FileExtensionValidator
-(allowed_extensions=['pdf', 'docx'])]) 
+(allowed_extensions=['pdf'])]) 
     fecha_aplicacion=models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.applicant.email
