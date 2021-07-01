@@ -3,14 +3,22 @@
 {% load bootstrap4 %}
 {% block title %}Aplicar{% endblock title %}
 {% block content %}
+{% if applicants == "None" %}
 <h2>Edit your account</h2>
 <p>You can edit your account using the follow form</p>
+
 <form action="" method="post" class="form" enctype="multipart/form-data">
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons %}
+    
     <button type="submit" class="btn btn-primary">Guardar</button>
-    <a href="#"class="btn btn-primary">Volver</a>
+    
     {% endbuttons %}
 </form>
+
+{% else %}
+    <p>Usted ya aplicó a esta oportunidad</p>
+    <a href="{% url 'core:home' %}"class="btn btn-primary">Volver</a>
+{% endif %}
 {% endblock content %}

@@ -93,11 +93,41 @@ class ApplyJobView(CreateView):
     slug_url_kwarg = "job_id"
     template_name = 'empleos/applicants_form.html' 
 
+    def get_context_data(self,*args, **kwargs):
+        context = super(ApplyJobView, self).get_context_data(*args,**kwargs)
+        context['applicants'] = Applicants.objects.filter(applicant_id=self.request.user.id,job_id=self.kwargs["job_id"])
+        if context["applicants"]:
+            return context
+        else:
+            context["applicants"]="None"
+            return context
+    
     @method_decorator(login_required(login_url=reverse_lazy("core:login")))
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(self.request, *args, **kwargs)
 
+    def form_valid(self, form):
+            # check if user already 
+        print("///validadion///")
+        aplicante=Applicants.objects.filter(applicant_id=self.request.user.id,job_id=self.kwargs["job_id"])
+        print(aplicante)
+        job=Jobs.objects.filter(id=self.kwargs["job_id"])
+        print("///job///",job)
+        #applicante = Applicants.objects.filter(user=self.request.user.id, job_id=self.kwargs["job_id"])
+        if aplicante:
+            messages.info(self.request, "La aplicación ya se realizó")
+            return HttpResponseRedirect(reverse_lazy("core:home"))
+        # save applicant
+        print("aún no aplica")
+        form.instance.applicant = self.request.user
+       
+        form.instance.job_id=self.kwargs["job_id"]
+        form.save()
+        print("guardado")
+        return super().form_valid(form)
+
     def post(self, request, *args, **kwargs):
+        print("entra al post")
         form = self.get_form()
         if form.is_valid():
             messages.info(self.request, "Successfully applied for the job!")
@@ -110,11 +140,11 @@ class ApplyJobView(CreateView):
                 )
             return self.form_valid(form)
         else:
-            print("FORMULARO INVALIDO")
-            return HttpResponseRedirect('/empleos/{}'.format(self.kwargs["job_id"]))
+            messages.info(self.request, "La aplicación ya se realizó")
+            return HttpResponseRedirect('/core/home')
 
     def get_success_url(self):
-        return reverse_lazy("empleos:detail-job", kwargs={"pk": self.kwargs["job_id"]})
+        return reverse_lazy('core:home')
 
     # def get_form_kwargs(self):
     #     kwargs = super(ApplyJobView, self).get_form_kwargs()
@@ -122,25 +152,7 @@ class ApplyJobView(CreateView):
     #     kwargs['job'] = 1
     #     return kwargs
 
-    def form_valid(self, form):
-        # check if user already 
-        print("///validadion///")
-        aplicante=Applicants.objects.filter(applicant_id=self.request.user.id,job_id=self.kwargs["job_id"])
-        print(aplicante)
-        job=Jobs.objects.filter(id=self.kwargs["job_id"])
-        print("///job///",job)
-        #applicante = Applicants.objects.filter(user=self.request.user.id, job_id=self.kwargs["job_id"])
-        if aplicante:
-            messages.info(self.request, "You already applied for this job")
-            return HttpResponseRedirect(reverse_lazy("empleos:job-list"))
-        # save applicant
-        print("aún no aplica")
-        form.instance.applicant = self.request.user
-       
-        form.instance.job_id=self.kwargs["job_id"]
-        form.save()
-        print("guardado")
-        return super().form_valid(form)
+   
 
 
 class ApplicantsListView(ListView):
