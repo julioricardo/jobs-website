@@ -1,0 +1,11 @@
+*.pyc
+__pycache__
+data/
+log/
+media/
+srdm.ini
+srdm.sock
+venv/
+.idea/
+webapp/settings.py
+migrations/

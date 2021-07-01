@@ -99,3 +99,5 @@
 [0m2021.07.01 09:28:58 WARN  no build tool detected in workspace '/home/julio/proyecto_Web_Octavio'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
 jul 01, 2021 9:29:08 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFORMACIÓN: Unsupported notification method: $/setTrace
+jul 01, 2021 9:41:29 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMACIÓN: Unsupported notification method: $/setTrace
