@@ -112,6 +112,8 @@ class ApplyJobView(CreateView):
         aplicante=Applicants.objects.filter(applicant_id=self.request.user.id,job_id=self.kwargs["job_id"])
         print(aplicante)
         job=Jobs.objects.filter(id=self.kwargs["job_id"])
+        
+        
         print("///job///",job)
         #applicante = Applicants.objects.filter(user=self.request.user.id, job_id=self.kwargs["job_id"])
         if aplicante:
@@ -130,10 +132,15 @@ class ApplyJobView(CreateView):
         print("entra al post")
         form = self.get_form()
         if form.is_valid():
+            nombre=self.request.user.first_name
+            apellido=self.request.user.last_name
+            trabajos=Jobs.objects.filter(id=self.kwargs["job_id"]).first()
+            trabajos=str(trabajos)
+            print(trabajos)
             messages.info(self.request, "Successfully applied for the job!")
             send_mail(
                 'Oportunidad Notificación',
-                'Aplicación exitosa ',
+                'Estimad@ '+nombre+' '+apellido+' '+'hemos recivido su aplicación a la oprtunudad '+trabajos+'',
                 'info@chamanaku.org',
                 [self.request.user.email],
                 fail_silently=False,
